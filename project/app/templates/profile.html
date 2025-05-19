@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}profile{% endblock %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'style/profile.css' %}">
+{% endblock %}
+{% block content %}
+<div class="employee-dashboard">
+  <div class="dashboard-header">
+    <h2>Welcome, {{ userdata.emp_name }}</h2>
+    <p>Your Employee ID: <strong>{{ userdata.id }}</strong></p>
+  </div>
+
+  <div class="employee-info">
+    <h3>Your Profile Details</h3>
+    <ul>
+      <li><strong>Name:</strong> {{ userdata.emp_name }}</li>
+      <li><strong>Email:</strong> {{ userdata.emp_email }}</li>
+      <li><strong>Contact:</strong> {{ userdata.emp_contact }}</li>
+      <li><strong>Department:</strong> {{ userdata.emp_dep }}</li>
+      <li><strong>Age:</strong> {{ userdata.emp_age }}</li>
+      <li><strong>Joining Date:</strong> {{ userdata.emp_Joining }}</li>
+    </ul>
+  </div>
+
+  
+</div>
+{% endblock %}

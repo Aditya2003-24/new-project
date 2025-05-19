@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}user{% endblock %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'style/user.css' %}">
+{% endblock %}
+{% block content %}
+
+<div class="company-landing">
+  <div class="banner">
+    <h1>Welcome to {{ company_name }}</h1>
+    <p>Empowering our people to thrive and innovate every day.</p>
+  </div>
+
+  <div class="section-cards">
+    <div class="card">
+      <h3>View Profile</h3>
+      <p>Check and update your personal details.</p>
+      <a href="{% url 'profile' pk=userdata.id %}">Go to Profile</a>
+    </div>
+
+    <div class="card">
+      <h3>Company Policies</h3>
+      <p>Stay up-to-date with the latest policies and updates.</p>
+      <a style="color:white;">View Policies</a>
+    </div>
+
+    <div class="card">
+      <h3>Employee Resources</h3>
+      <p>Access documents, tools, and helpful materials.</p>
+      <a href="">Explore Resources</a>
+    </div>
+
+    <div class="card">
+      <h3>Logout</h3>
+      <p>End your session securely.</p>
+      <a href="">Logout</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

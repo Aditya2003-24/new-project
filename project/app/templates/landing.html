@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} main {% endblock %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'style/landing.css' %}">{% endblock %}
+{% block content %} 
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Manage Your Employees Effortlessly</h1>
+      <p>Register, view, and manage employee information with our simple and secure dashboard.</p>
+      <a href="#" class="btn-primary">Get Started</a>
+    </div>
+    <div class="hero-image">
+      <img src="{% static 'image/bio-6956069_1280.webp' %}" alt="Employees">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Why Use Our System?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Easy Registration</h3>
+        <p>Quickly add new employees with detailed info like department, contact, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Real-Time Data</h3>
+        <p>Access employee records instantly and keep everything organized.</p>
+      </div>
+      <div class="card">
+        <h3>Secure Access</h3>
+        <p>Protect employee information with secure login and data encryption.</p>
+      </div>
+    </div>
+  </section>
+ {% endblock %}

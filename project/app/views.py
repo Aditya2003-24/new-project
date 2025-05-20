@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.db.models import Q
 
 # Create your views here.
 def landing(request):
@@ -26,11 +27,11 @@ def login(request):
                 print(userdata)
                 print(passw)
 
-                if passw==pass2:
+                if str(passw).strip() == str(pass2).strip():
+
                     print('helo')
                     return render(request,'employee.html',{'userdata':userdata})
-                else:
-                    return render(request,'employee.html',{'userdata':userdata})
+                
 
                 
                 
@@ -112,3 +113,16 @@ def delete(request,pk):
 def profile(request,pk):
     userdata=Employee.objects.get(id=pk)
     return render(request,'profile.html',{'userdata':userdata})
+
+def search(request):
+    
+    x=request.POST.get('name')
+    b=request.POST.get('age')
+    c=request.POST.get('contact')
+    d=request.POST.get('department')
+    e=request.POST.get('email')
+    print(x)
+    searchdata=Employee.objects.filter(Q(emp_name__icontains=x) | Q(emp_email__icontains=e) | Q(emp_dep__icontains=d) | Q(emp_contact__icontains=c) | Q(emp_age__icontains=b))
+    print(searchdata)
+    adminname='admin@gmail.com'
+    return render(request,'admin.html',{'data':searchdata,'admindata':adminname})

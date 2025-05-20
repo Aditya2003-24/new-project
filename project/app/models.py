@@ -9,6 +9,6 @@ class Employee(models.Model):
     emp_dep=models.CharField(max_length=40)
     emp_contact=models.IntegerField()
     emp_age=models.IntegerField()
-    emp_image=models.ImageField(upload_to='image/')
+    emp_image=models.ImageField(upload_to='image/',null=True,blank=True,max_length=200)
     emp_password=models.IntegerField()
 

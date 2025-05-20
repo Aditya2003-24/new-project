@@ -28,7 +28,7 @@
 {{key}}
 <div class="form-container">
     <h2>Employee  Form</h2>
-    <form action="{% url 'register' %}" method="POST">
+    <form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
       <div class="form-group">
         <label for="empName">Employee Name</label>
@@ -84,9 +84,24 @@
 
   {% endif %}
 
+  
+
   {% if data %}
+
+  <form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    <input type="search" name="name" value="none">
+    <input type="search" name="age" value="none">
+    <input type="search" name="contact" value="none">
+    <input type="search" name="department" value="none">
+    <input type="search" name="email" value="none">
+
+    <input type="submit">
+  </form>
+  
  
   <table border="1">
+    
     <tr>
     
         <th>S.NO</th>

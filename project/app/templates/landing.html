@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-{% block title %} main {% endblock %}
+{% block title %}
+ main {% endblock %}
 {% load static %}
-{% block css %}<link rel="stylesheet" href="{% static 'style/landing.css' %}">{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'style/landing.css' %}">
+<link rel="stylesheet" href="{% static 'style/land.css' %}">
+{% endblock %}
 {% block content %} 
 
   <section class="hero">
@@ -32,5 +35,79 @@
         <p>Protect employee information with secure login and data encryption.</p>
       </div>
     </div>
+  </section>
+
+
+  
+
+  <!-- Features Section -->
+  <section id="features" class="emp-features">
+    <h2>Key Features</h2>
+    <div class="emp-features-grid">
+      <div class="emp-feature-item">Employee Profiles</div>
+      <div class="emp-feature-item">Attendance Tracking</div>
+      <div class="emp-feature-item">Payroll Management</div>
+      <div class="emp-feature-item">Performance Reviews</div>
+      <div class="emp-feature-item">Task Assignment</div>
+      <div class="emp-feature-item">Reports & Analytics</div>
+    </div>
+  </section>
+
+  <!-- Dashboard Preview -->
+  <section class="emp-dashboard-preview">
+    <h2>Live Dashboard Preview</h2>
+    <img src="{% static 'image/live-dashboard-fullscreen.png' %}" alt="Dashboard Preview" />
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="emp-why-choose">
+    <h2>Why Choose Us</h2>
+    <ul class="emp-why-list">
+      <li class="emp-why-item">Easy to Use Interface</li>
+      <li class="emp-why-item">Scalable for All Team Sizes</li>
+      <li class="emp-why-item">Secure & Reliable</li>
+      <li class="emp-why-item">24/7 Support</li>
+      <li class="emp-why-item">Affordable Plans</li>
+    </ul>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="emp-pricing">
+    <h2>Pricing Plans</h2>
+    <div class="emp-pricing-wrapper">
+      <div class="emp-pricing-card">
+        <h3>Basic</h3>
+        <p>For small teams</p>
+        <p>$9/month</p>
+      </div>
+      <div class="emp-pricing-card">
+        <h3>Standard</h3>
+        <p>For growing businesses</p>
+        <p>$29/month</p>
+      </div>
+      <div class="emp-pricing-card">
+        <h3>Enterprise</h3>
+        <p>Customized solutions</p>
+        <p>Contact Us</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="emp-testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote class="emp-testimonial">"This platform streamlined our HR operations like never before!" - ABC Corp</blockquote>
+    <blockquote class="emp-testimonial">"Reliable, intuitive, and incredibly helpful!" - XYZ Ltd</blockquote>
+  </section>
+
+  <!-- Contact Us -->
+  <section class="emp-contact">
+    <h2>Contact Us</h2>
+    <form class="emp-contact-form">
+      <input type="text" class="emp-input" placeholder="Your Name" required />
+      <input type="email" class="emp-input" placeholder="Your Email" required />
+      <textarea class="emp-textarea" placeholder="Your Message" required></textarea>
+      <button type="submit" class="emp-send-btn">Send Message</button>
+    </form>
   </section>
  {% endblock %}

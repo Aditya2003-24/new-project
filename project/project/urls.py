@@ -32,5 +32,6 @@ urlpatterns = [
     path('delete/<int:pk>/',views.delete,name='delete'),
     path('profile/<int:pk>/',views.profile,name='profile'),
     path('search/',views.search,name='search'),
+    path('addmin/',views.addmin,name='addmin'),
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -5,6 +5,9 @@ from django.db.models import Q
 # Create your views here.
 def landing(request):
     return render(request,'landing.html')
+def addmin(request):
+     adminname='admin@gmail.com'
+     return render(request,'admin.html',{'admindata':adminname})
 def login(request):
     email=request.POST.get('email')
     passw=request.POST.get('password')
